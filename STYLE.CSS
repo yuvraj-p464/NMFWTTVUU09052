@@ -1,0 +1,45 @@
+const slides = document.querySelectorAll('.slide');
+const nextBtn = document.getElementById('nextBtn');
+const prevBtn = document.getElementById('prevBtn');
+const step = document.getElementById('step');
+const progressBar = document.getElementById('progressBar');
+let current = 0;
+
+function showSlide(i) {
+  slides.forEach((s, idx) => s.classList.toggle('active', idx === i));
+  step.textContent = `Slide ${i + 1} of ${slides.length}`;
+  prevBtn.disabled = i === 0;
+  nextBtn.disabled = i === slides.length - 1;
+  progressBar.style.width = ((i + 1) / slides.length * 100) + "%";
+  current = i;
+}
+
+nextBtn.onclick = () => {
+  if (current < slides.length - 1) showSlide(current + 1);
+};
+
+prevBtn.onclick = () => {
+  if (current > 0) showSlide(current - 1);
+};
+
+// Keyboard navigation
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight') nextBtn.click();
+  if (e.key === 'ArrowLeft') prevBtn.click();
+});
+
+// Tap / Swipe support
+let startX = 0;
+document.addEventListener('touchstart', e => {
+  startX = e.touches[0].clientX;
+});
+
+document.addEventListener('touchend', e => {
+  let endX = e.changedTouches[0].clientX;
+  if (endX - startX > 50) prevBtn.click();
+  else if (startX - endX > 50) nextBtn.click();
+  else nextBtn.click(); // tap ? next
+});
+
+// Initialize
+showSlide(0);
