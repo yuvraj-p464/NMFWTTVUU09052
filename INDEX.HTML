@@ -1,80 +1,93 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Interactive Portfolio Project using HTML, CSS and JavaScript</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Portfolio Project</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="app">
-    <header>
-      <h1>Interactive Portfolio Project using HTML, CSS and JavaScript</h1>
-    </header>
+  <div class="container">
+    <h1>Interactive Portfolio Project using HTML, CSS and JavaScript</h1>
 
-    <main class="deck" id="deck">
-      <!-- Slide 1 -->
-      <section class="slide active">
-        <h2>Introduction</h2>
-        <p><b>Name:</b> Saravanan.V</p>
-        <p><b>Location:</b> Walajapet Arakkonam, Ranipet District</p>
-        <p><b>Mobile:</b> 7358846256</p>
-        <p><b>Email:</b> smilesaravanan28@gmail.com</p>
-      </section>
-      <!-- Slide 2 -->
-      <section class="slide">
-        <h2>Career Objective</h2>
-        <p>To pursue IT & Government jobs and build a successful career while inspiring others.</p>
-      </section>
-      <!-- Slide 3 -->
-      <section class="slide">
-        <h2>Dream Project / Future Profile</h2>
-        <p><b>Founder – Orphanage Service</b></p>
-        <p>Changing Lives – Helping children find their dreams</p>
-      </section>
-      <!-- Slide 4 -->
-      <section class="slide">
-        <h2>Tools & Technologies</h2>
-        <ul>
-          <li>HTML, CSS, JavaScript</li>
-          <li>GitHub</li>
-          <li>VS Code</li>
-        </ul>
-      </section>
-      <!-- Slide 5 -->
-      <section class="slide">
-        <h2>Portfolio Design & Layout</h2>
-        <p>Interactive slide-based design using HTML, CSS, and JavaScript.</p>
-      </section>
-      <!-- Slide 6 -->
-      <section class="slide">
-        <h2>Projects & Achievements</h2>
-        <p>Project Completed – Overview: English Communications</p>
-      </section>
-      <!-- Slide 7 -->
-      <section class="slide">
-        <h2>Languages Known</h2>
-        <ul>
-          <li>Tamil – Fluent</li>
-          <li>English – Basic</li>
-        </ul>
-      </section>
-      <!-- Slide 8 -->
-      <section class="slide">
-        <h2>Learning & Inspiration</h2>
-        <ul>
-          <li>Completed Mudhalvan Course – Improved English Communication & Leadership Skills</li>
-          <li>Inspired by Dr. A.P.J. Abdul Kalam – "Missile Man of India"</li>
-        </ul>
-      </section>
-    </main>
+    <!-- Slide 1 -->
+    <div class="slide active">
+      <h2>1. Introduction</h2>
+      <p><strong>Name:</strong> Yuvaraj.P</p>
+      <p><strong>Location:</strong> Nagavedu, Ranipet district</p>
+      <p><strong>Mobile:</strong> 8667566231</p>
+      <p><strong>Email:</strong> suganraj5656@gmil.com</p>
+    </div>
 
-    <footer>
-      <button class="btn" id="prevBtn">? Prev</button>
-      <span id="step">Slide 1 of 8</span>
-      <button class="btn" id="nextBtn">Next ?</button>
-      <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
-    </footer>
+    <!-- Slide 2 -->
+    <div class="slide">
+      <h2>2. Career Objective</h2>
+      <p>To pursue IT & Government jobs and build a successful career while inspiring others.</p>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+      <h2>3. Dream Project / Future Profile</h2>
+      <p><strong>Founder â€“ "Orphanage Service"</strong></p>
+      <p><em>Changing Lives</em></p>
+      <p><strong>Tagline:</strong> Helping children find their dreams</p>
+      <ul>
+        <li>Serve orphaned children with love and care</li>
+        <li>Empower children to pursue their dreams</li>
+        <li>Provide education, health & safety</li>
+      </ul>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide">
+      <h2>4. Education</h2>
+      <p><strong>Bachelor of Computer Applications (B.C.A.)</strong></p>
+      <p><strong>Location:</strong> Arakkonam, Attupakkam</p>
+      <p><strong>University:</strong> Thiruvalluvar University</p>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide">
+      <h2>5. Skills</h2>
+      <ul>
+        <li>Web Development (HTML, CSS, JavaScript)</li>
+        <li>Programming (C, Java, Python basics)</li>
+        <li>Problem Solving & Logical Thinking</li>
+      </ul>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="slide">
+      <h2>6. Hobbies</h2>
+      <ul>
+        <li>Reading Books</li>
+        <li>Helping Others</li>
+        <li>Exploring Technology</li>
+      </ul>
+    </div>
+
+    <!-- Slide 7 -->
+    <div class="slide">
+      <h2>7. Languages Known</h2>
+      <ul>
+        <li>Tamil â€“ Read and Write</li>
+        <li>English â€“ Read and Write</li>
+      </ul>
+    </div>
+
+    <!-- Slide 8 -->
+    <div class="slide">
+      <h2>8. Learning & Inspiration</h2>
+      <p>Completed Mudhalvan Course â€“ Improved English Communication & Leadership Skills</p>
+      <p>Inspired by K. Kamarajar â€“ "Kingmaker of Politics"</p>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+      <button onclick="prevSlide()">Previous</button>
+      <button onclick="nextSlide()">Next</button>
+      <p id="counter"></p>
+    </div>
   </div>
 
   <script src="script.js"></script>
